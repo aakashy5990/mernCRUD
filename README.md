@@ -1,1 +1,3 @@
-# mernCRUD
+mongosh
+show dbs
+use contacts-crud
