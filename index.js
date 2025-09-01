@@ -5,8 +5,13 @@ const mongoose = require("mongoose");
 const Contact = require("./models/contacts.models");
 
 
+// Database strings
+// if you are see this string then if you want to use then you can its just for you 🙃
+
+// mongodb+srv://aribaonsocial:22647@cluster0.0vqz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
 // Database connection 
-mongoose.connect("mongodb+srv://aribaonsocial:22647@cluster0.0vqz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() =>{
+mongoose.connect(process.env.MONGO_URL).then(() =>{
   console.log("Database connected.");
 })
 
