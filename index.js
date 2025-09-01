@@ -6,7 +6,7 @@ const Contact = require("./models/contacts.models");
 
 
 // Database connection 
-mongoose.connect("mongodb://localhost:27017/contacts-crud").then(() =>{
+mongoose.connect("mongodb+srv://aribaonsocial:22647@cluster0.0vqz1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(() =>{
   console.log("Database connected.");
 })
 
@@ -69,7 +69,7 @@ app.get('/delete-contact/:id', async (req,res)=>{
   res.redirect("/");
 })
 
-app.listen(process.env.PORT || 30001 ,()=>{
+app.listen(process.env.PORT || 3001 ,()=>{
   console.log(`Server started successfully on port 3000 http://localhost:${process.env.PORT}/`);
 })
 
